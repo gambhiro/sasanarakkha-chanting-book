@@ -251,6 +251,14 @@ Accompanying audio recordings can be found at:
 
 }
 
+\ifdigitalversion
+
+\else
+
+\clearpage
+
+\fi
+
 #+end_src
 
 * Acknowledgments

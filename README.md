@@ -1,7 +1,5 @@
 <div align=center><img alt="Cover" width="524" height="744" src="assets/illustrations/A5/front_cover_A5.jpg"></div>
-</br>
-</br>
-</br>
+
 </br>
 
 # Prerequisites for Building and Editing Locally

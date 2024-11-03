@@ -26,12 +26,12 @@ counter = 1
 def replace_numbers(match):
     global counter
     # Create a replacement string with the current counter value
-    new_string = f'<p><a id="en{counter}appendix" href="{match.group(1)}#en{counter}"><sup>{counter}</sup></a>{match.group(2) if match.group(2) else ""}</p>'
+    new_string = f'<p><a href="{match.group(1)}#en{counter}" id="en{counter}appendix"><sup>{counter}</sup></a>{match.group(2) if match.group(2) else ""}</p>'
     counter += 1
     return new_string
 
 # Regular expression to capture the pattern
-pattern = re.compile(r'<p><a id="en\d+appendix" href="([a-zA-Z0-9_-]+\.xhtml)#en\d+"><sup>\d+</sup></a>(.*?)</p>', re.DOTALL)
+pattern = re.compile(r'<p><a href="([a-zA-Z0-9_-]+\.xhtml)#en\d+" id="en\d+appendix"><sup>\d+</sup></a>(.*?)</p>', re.DOTALL)
 
 # Perform the substitution with the replace_numbers function
 new_content = re.sub(pattern, replace_numbers, content)
